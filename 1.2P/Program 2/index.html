@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Task 1.2P</h1>
+    <h2>JavaScript Concepts:</h2>
+
+    <br>
+
+    <h3>String Methods</h3>
+
+    <h4>1. String Length:</h4>
+    <p id="string1"></p>
+
+    <h4>2. Sliced String:</h4>
+    <p id="string2"></p>
+
+    <h4>3. To Uppercase:</h4>
+    <p id="string3"></p>
+
+    <h4>4. Substring:</h4>
+    <p id="string4"></p>
+
+    <h4>5. Replace:</h4>
+    <p id="string5"></p>
+
+    <br>
+
+    <h3>Number Methods</h3>
+
+    <h4>1. toString():</h4>
+    <p id="num1"></p>
+
+    <h4>2. toExponential():</h4>
+    <p id="num2"></p>
+
+    <h4>3. toFixed():</h4>
+    <p id="num3"></p>
+
+    <h4>4. toPrecision():</h4>
+    <p id="num4"></p>
+
+    <h4>5. valueOf():</h4>
+    <p id="num5"></p>
+
+    <br>
+
+    <h3>Array Methods</h3>
+
+    <h4>1. Length:</h4>
+    <p id="array1"></p>
+
+    <h4>2. Pop:</h4>
+    <p id="array2"></p>
+
+    <h4>3. Push:</h4>
+    <p id="array3"></p>
+
+    <h4>4. Shift:</h4>
+    <p id="array4"></p>
+
+    <h4>5. Concat():</h4>
+    <p id="array5"></p>
+
+    <br>
+
+    <h3>Date Methods</h3>
+
+    <h4>1. getFullYear():</h4>
+    <p id="date1"></p>
+
+    <h4>2. getMonth():</h4>
+    <p id="date2"></p>
+
+    <h4>3. getDate():</h4>
+    <p id="date3"></p>
+
+    <h4>4. getHours():</h4>
+    <p id="date4"></p>
+
+    <h4>5. getMinutes():</h4>
+    <p id="date5"></p>
+
+    <br>
+
+    <h3>Function Methods</h3>
+
+    <h4>1. call():</h4>
+    <p id="function1"></p>
+
+    <h4>2. Return:</h4>
+    <p id="function2"></p>
+
+    <script>
+
+        //String Methods
+        let string = "Michael";
+        document.getElementById("string1").innerHTML = string.length;
+
+        let string2 = "Michael, Julian, Lara";
+        let part = string2.slice(9, 15);
+        document.getElementById("string2").innerHTML = part;
+
+        let string3 = "to uppercase";
+        let text = string3.toUpperCase();
+        document.getElementById("string3").innerHTML = text;
+
+        let string4 = "Michael, Julian & Lara";
+        let sub = string4.substr(9, 13);
+        document.getElementById("string4").innerHTML = sub;
+
+        let string5 = "Michael, Julian & Lara";
+        let replace = string5.replace("Michael", "Miguel");
+        document.getElementById("string5").innerHTML = replace;
+
+        //Number Methods
+        let x = 123;
+        document.getElementById("num1").innerHTML = x.toString();
+
+        let y = 3.141;
+        document.getElementById("num2").innerHTML = y.toExponential();
+
+        let z = 9.99;
+        document.getElementById("num3").innerHTML = z.toFixed(0);
+
+        let a = 9.99;
+        document.getElementById("num4").innerHTML = a.toPrecision(2);
+
+        let b = 123;
+        document.getElementById("num5").innerHTML = b.valueOf();
+
+        //Array Methods
+        let people = ["Michael", "Julian", "Lara"];
+        document.getElementById("array1").innerHTML = people.length;
+
+        people.pop();
+        document.getElementById("array2").innerHTML = people;
+
+        people.push("Lara");
+        document.getElementById("array3").innerHTML = people;
+
+        people.shift();
+        document.getElementById("array4").innerHTML = people;
+
+        let people2 = ["Jeremy", "John", "Jenkins"];
+        let people3 = people.concat(people2);
+        document.getElementById("array5").innerHTML = people3;
+
+        //Date Methods
+        let d = new Date();
+
+        document.getElementById("date1").innerHTML = d.getFullYear();
+
+        document.getElementById("date2").innerHTML = d.getMonth();
+
+        document.getElementById("date3").innerHTML = d.getDate();
+
+        document.getElementById("date4").innerHTML = d.getHours();
+
+        document.getElementById("date5").innerHTML = d.getMinutes();
+
+        //Function Methods
+        let person = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        let person1 = {
+            firstName: "Michael",
+            lastName: "Sperandeo"
+        }
+        let x1 = person.fullName.call(person1);
+        document.getElementById("function1").innerHTML = x1;
+
+
+        function returnFunction(a, b) {
+            return a * b;
+        }
+        let x2 = returnFunction(23, 3);
+        document.getElementById("function2").innerHTML = x2;
+
+    </script>
+
+</body>
+
+</html>
